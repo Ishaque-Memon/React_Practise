@@ -1,10 +1,10 @@
 import './App.css';
 import Navbar from './components/Navbar.js'
 import FormSubmission from './components/FormSubmission.js';
-// import About from './components/About.js'
+import About from './components/About.js'
 import React, {useState} from 'react'
 import Alert from './components/Alert.js';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 
@@ -54,7 +54,7 @@ export default function MyApp(){
     <>
 
     {/* This is Textutils Project */}
-     {/* <Router> */}
+     <Router>
 
       <Navbar title="TextUtils" navComponent1="Home" mode={mode} toggleMode={toggleMode} btnText={btnText} />
       <Alert alert={alert}/>
@@ -62,26 +62,26 @@ export default function MyApp(){
       
     <div className="container my-3" >
       
-    {/* <Routes> */}
+    <Routes>
             {/* Updated to use `element` prop */}
-            {/* <Route path="/About" element={<About mode={mode} />} /> */}
-            {/* <Route */}
-              {/* path="/" */}
-              {/* element={ */}
+            <Route path="/About" element={<About mode={mode} />} />
+            <Route
+              path="/"
+              element={
                 <FormSubmission
                   heading="Enter the text"
                   mode={mode}
                   showAlert={showAlert}
-     />
-              {/* } */}
-            {/* /> */}
-    {/* </Routes> */}
+                />
+              }
+            />
+    </Routes>
 
 
     </div>
 
     
-     {/* </Router> */}
+     </Router>
 
    
     
